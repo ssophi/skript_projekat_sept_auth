@@ -74,11 +74,11 @@ function authToken(req, res, next) {
   const io_auth = require("socket.io")(server_auth, {
     // path: '/socket.io',
     cors: {
-        origin: "localhost:8080",
+        origin: "*",
         credentials: true
     },
 
-    origins: ["http://localhost:8080"],
+    origins: ["*"],
     methods: ['GET', 'POST'],
             credentials: true,        
             allowEIO3: true
